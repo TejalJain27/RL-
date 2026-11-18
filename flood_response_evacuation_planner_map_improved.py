@@ -422,7 +422,6 @@ print("Moving away:",
 print("Invalid action:",
       calculate_reward(1000, 1000, False, False, True))
 
-!pip install gymnasium
 
 # PREPARE ROAD-LEVEL FLOOD RISK
 
