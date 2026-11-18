@@ -2159,7 +2159,6 @@ Run this cell after the dashboard application and data-export cells complete. Ke
 # MEMBER 4: LAUNCH STREAMLIT AND CLOUDFLARE TUNNEL
 
 # Stop an older Streamlit process if one is still using port 8501.
-!fuser -k 8501/tcp 2>/dev/null || true
 
 # Start Streamlit in the background.
 !streamlit run /content/app.py --server.port 8501 --server.address 0.0.0.0 --server.headless true > /content/streamlit.log 2>&1 &
