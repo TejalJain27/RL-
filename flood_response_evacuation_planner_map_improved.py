@@ -1960,8 +1960,6 @@ Run this cell once in the current Colab runtime.
 
 """
 
-!pip -q install streamlit plotly folium
-
 """## Create the Streamlit dashboard application
 The improved map uses standard OpenStreetMap tiles (no CARTO API-key watermark), ordinary roads, highlighted historical flood-risk roads, historical flood points, selectable evacuation routes, start/destination markers, a legend, layer controls, fullscreen and distance measurement.
 
