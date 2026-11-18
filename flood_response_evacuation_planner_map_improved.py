@@ -19,7 +19,6 @@ This is a simulation prototype; it is not a real-world emergency dispatch system
 The libraries will help us download roads, process geographical information and create our interactive map.
 """
 
-!pip install osmnx folium geopandas networkx pandas numpy
 
 # MEMBER 1: DOWNLOAD / LOAD VELACHERY ROAD NETWORK
 # Uses a cached GraphML file when available. The first download depends on Overpass availability.
