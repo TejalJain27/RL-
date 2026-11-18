@@ -2160,16 +2160,7 @@ Run this cell after the dashboard application and data-export cells complete. Ke
 
 # Stop an older Streamlit process if one is still using port 8501.
 
-# Start Streamlit in the background.
-!streamlit run /content/app.py --server.port 8501 --server.address 0.0.0.0 --server.headless true > /content/streamlit.log 2>&1 &
 
-# Download Cloudflare Tunnel.
-!wget -q https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64 -O /content/cloudflared
-!chmod +x /content/cloudflared
-
-# Wait up to 30 seconds for Streamlit to become ready.
-!for i in $(seq 1 15); do if curl -fsS http://127.0.0.1:8501/_stcore/health >/dev/null; then echo "Streamlit is ready."; break; fi; sleep 2; done
-!curl -I --max-time 10 http://127.0.0.1:8501 || (echo "Streamlit did not start. Log follows:" && cat /content/streamlit.log)
 
 # Keep this cell running. Open the trycloudflare.com URL shown below.
-!/content/cloudflared tunnel --url http://127.0.0.1:8501 --no-autoupdate
+
